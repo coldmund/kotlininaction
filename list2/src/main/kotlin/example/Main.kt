@@ -21,4 +21,5 @@ fun main(args: Array<String>) {
   println(mixOptimized(Color.BLUE, Color.YELLOW))
 
   println(eval(Sum(Sum(Num(1), Num(2)), Num(4))))
+  println(eval2(Sum(Sum(Num(1), Num(2)), Num(4))))
 }
