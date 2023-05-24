@@ -1,6 +1,5 @@
 package example
 
-import  example.Person
 import  geometry.shapes.*
 
 fun main(args: Array<String>) {
@@ -14,4 +13,18 @@ fun main(args: Array<String>) {
   println(rectangle.isSquere)
 
   println(createRandomRectangle().isSquere)
+
+  println(Color.BLUE.rgb())
+  println(getMnemonic(Color.BLUE))
 }
+
+fun getMnemonic(color: Color) =
+  when(color) {
+    Color.RED -> "Richard"
+    Color.ORANGE -> "Of"
+    Color.YELLOW -> "York"
+    Color.GREEN -> "Gave"
+    Color.BLUE -> "Battle"
+    Color.INDIGO -> "In"
+    Color.VIOLET -> "Vain"
+  }
