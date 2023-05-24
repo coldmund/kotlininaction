@@ -25,4 +25,5 @@ fun main(args: Array<String>) {
 
   iter1()
   iter2()
+  iter3()
 }
