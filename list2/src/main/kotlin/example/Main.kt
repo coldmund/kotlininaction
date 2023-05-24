@@ -16,6 +16,7 @@ fun main(args: Array<String>) {
 
   println(Color.BLUE.rgb())
   println(getMnemonic(Color.BLUE))
+  println(getWarmth(Color.ORANGE))
 }
 
 fun getMnemonic(color: Color) =
@@ -28,3 +29,9 @@ fun getMnemonic(color: Color) =
     Color.INDIGO -> "In"
     Color.VIOLET -> "Vain"
   }
+
+fun getWarmth(color: Color) = when(color) {
+  Color.RED, Color.ORANGE, Color.YELLOW -> "Warm"
+  Color.GREEN -> "neutral"
+  Color.BLUE, Color.INDIGO, Color.VIOLET -> "cold"
+}
