@@ -11,4 +11,12 @@ fun iter1() {
   for(i in 1..100) {
     print(fizzBuzz(i))
   }
+  println()
+}
+
+fun iter2() {
+  for(i in 100 downTo 1 step 2) {
+    print(fizzBuzz(i))
+  }
+  println()
 }

@@ -24,4 +24,5 @@ fun main(args: Array<String>) {
   println(eval2(Sum(Sum(Num(1), Num(2)), Num(4))))
 
   iter1()
+  iter2()
 }
