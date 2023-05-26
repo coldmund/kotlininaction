@@ -58,4 +58,16 @@ fun main(args: Array<String>) {
   println(readNumber(reader1))
   val reader2 = BufferedReader(StringReader("asdf"))
   println(readNumber(reader2))
+
+  fun readNumber2(reader: BufferedReader) {
+    val number = try {
+      Integer.parseInt(reader.readLine())
+    } catch(e: NumberFormatException) {
+//      return
+      null
+    }
+    println(number)
+  }
+  val reader3 = BufferedReader(StringReader("not a number"))
+  readNumber2(reader3)
 }
