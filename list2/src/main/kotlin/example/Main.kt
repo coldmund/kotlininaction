@@ -26,4 +26,9 @@ fun main(args: Array<String>) {
   iter1()
   iter2()
   iter3()
+
+  fun isLetter(c: Char) = c in 'a'..'z' || c in 'A'..'Z'
+  fun isNotDigit(c: Char) = c !in '0'..'9'
+  println(isLetter('q'))
+  println(isNotDigit('x'))
 }
