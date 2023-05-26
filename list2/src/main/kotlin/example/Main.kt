@@ -1,6 +1,8 @@
 package example
 
 import  geometry.shapes.*
+import java.io.BufferedReader
+import java.io.StringReader
 
 fun main(args: Array<String>) {
   println("Hello, ${if(args.size >0) args[0] else "someone"}!")
@@ -41,4 +43,19 @@ fun main(args: Array<String>) {
 
   println("Kotlin" in "Java".."Scala")
   println("Kotlin" in setOf("Java", "Scala"))
+
+  fun readNumber(reader: BufferedReader): Int? {
+    try {
+      val line = reader.readLine()
+      return Integer.parseInt(line)
+    } catch(e: NumberFormatException) {
+      return null
+    } finally {
+      reader.close()
+    }
+  }
+  val reader1 = BufferedReader(StringReader("239"))
+  println(readNumber(reader1))
+  val reader2 = BufferedReader(StringReader("asdf"))
+  println(readNumber(reader2))
 }
